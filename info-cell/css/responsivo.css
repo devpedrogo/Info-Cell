@@ -79,9 +79,15 @@
         margin-left: 10%;
         margin-right: 10%;
     }
+    .contato p{
+        font-size: 35px;
+    }
 }
 @media screen and (max-width: 320px) {
     .logo h1 img{
         display: none;
+    }
+    .contato p{
+        font-size: 25px;
     }
 }

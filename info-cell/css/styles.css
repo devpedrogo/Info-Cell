@@ -93,6 +93,7 @@ span{
 aside p{
     font-family: "Kanit", serif;
     margin-top: 70px;
+    color: #4828d6;
 }
 article{
     margin-right: 10%;
@@ -153,13 +154,137 @@ footer i:nth-child(4):hover{
 
 .sobre{
     display: flex;
-    flex-flow: column wrap;
+    flex: 80%;
+    flex-flow: column nowrap;
     border-radius: 20px;
     border: 5px solid blue;
     font-family: "Kanit", serif;
+    text-align: justify;
+    text-indent: 20px;
+    letter-spacing: -1px;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #4828d6;
+    font-size: 25px;
 }
+.sobre img{
+    border-radius: 10px;
+    width: 100%;
+}
+.sobre img:hover{
+    transform: scale(0.9);
+    transition: all 1s ease-in-out;
+}
+.servicos{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+    justify-content: space-between;
+    padding: 0px;
+    gap: 5%;
+    font-family: "Kanit", serif;
+    margin-bottom: 30px;
+}
+.celular #icone-cell{
+    color: orange;
+    font-size: 120px;
+    animation: pular 2s ease infinite;
+}
+.celular #icone-cell:hover{
+    color: #4828d6;
+}
+.celular{
+    border: 5px solid blue;
+    border-radius: 10px;
+    flex: 40%;
+    text-align: center;
+    padding: 10px;
+}
+.celular h1{
+    color: orange;
+    font-size: 40px;
+    text-decoration: underline #4828d6;
+}
+.celular p{
+    font-size: 25px;
+    color: #4828d6;
+}
+.celular p i{
+    color: orange;
+    
+}
+.notebook #icone-note{
+    color: orange;
+    font-size: 110px;
+    animation: pular 2s ease infinite;
+}
+.notebook #icone-note:hover{
+    color: #4828d6;
+}
+.notebook{
+    border: 5px solid blue;
+    border-radius: 10px;
+    flex: 40%;
+    text-align: center;
+    padding: 10px;
+}
+.notebook h1{
+    color: orange;
+    font-size: 40px;
+    text-decoration: underline #4828d6;
+}
+.notebook p{
+    font-size: 25px;
+    color: #4828d6;
+}
+.notebook p i{
+    color: orange;   
+}
+.contato{
+    display: flex;
+    flex: 80%;
+    flex-flow: column wrap;
+    border: 5px solid blue;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-family: "Kanit", serif;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.contato a{
+    text-decoration: none;
+    max-width: 500px;
+}
+.contato p{
+    font-size: 50px;
+    color: #4828d6;
+    border: 1px dotted transparent;
+}
+.contato p:hover{
+    color: orange;
+    border: 1px dotted #4828d6;;
+}
+.contato i{
+    font-size: 60px;
+}
+.contato a:nth-child(1) i{
+    color: green;
+}
+.contato a:nth-child(2) i{
+    color: purple;
+}
+.contato a:nth-child(3) i{
+    color: red;
+}
+
+
 
 @keyframes pular {
     0%{
