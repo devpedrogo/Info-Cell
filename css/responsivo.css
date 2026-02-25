@@ -1,0 +1,137 @@
+@media screen and (max-width: 1338px) {
+    aside{
+        margin-top: 50px;
+    }
+    aside h2:nth-child(2){
+        line-height: 50px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    ul{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        padding: 0;
+        padding-bottom: 50px;
+        border-radius: 0px 0px 15px 15px;
+        background-color: #4828d6;
+        gap: 25px;
+        
+    }
+    ul li{
+        margin-left: 10%;
+        
+    }
+    .logo{
+        flex: 80%;
+        margin-right: 10%;
+        justify-content: space-between;
+    }
+    .logo button{
+        display: inline-block;
+    }
+    .logo button i:hover{
+        color: orange;
+        transition: all .5s ease;
+    }
+    aside{
+        margin-top: 0px;
+    }
+    aside h2{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    aside p{
+        margin-top: 0px;
+    }
+    article{
+        margin: auto;
+    }
+    #inicio{
+        flex-direction: column; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo h1{
+        font-size: 50px;
+    }
+    main{
+        flex-flow: column nowrap;
+    }
+    aside{
+        margin-right: 10%;
+    }
+    article{
+        margin-left: 10%;
+        margin: auto;
+    }
+    .contato{
+        border: none;
+        padding: 0;
+    }
+    .contato a{
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: 0px 0px 0px 0px;
+    }
+    .whats{
+        align-items: center;
+        justify-content: center;
+    }
+    .whats-icon{
+        padding: 15px;
+    }
+    .whats-icon i{
+        font-size: 40px;
+    }
+    .whats p{
+        font-size: 15px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    footer div{
+        gap: 50px;
+    }
+    footer div i{
+        font-size: 35px;
+    }
+    article{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .contato{
+        border: none;
+    }
+    .contato a{
+        width: 320px;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: 0px 0px 0px 0px;
+    }
+    .whats-icon{
+        padding: 15px;
+    }
+    .whats-icon i{
+        font-size: 40px;
+    }
+    .whats p{
+        font-size: 15px;
+        width: 200px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .logo h1 img{
+        display: none;
+    }
+    .contato a{
+        width: 200px;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

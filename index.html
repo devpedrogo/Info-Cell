@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Cell</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>InfoCell<img src="img/logo-img.webp" alt="" style="width: 70px; position: relative; top: 12px;"></h1>
+            <button id="menu-btn"><i class="fa-solid fa-bars" id="menu-icone"></i></button>
+        </div>
+
+        <ul id="menu">
+            <li><a href="#inicio" class="links">Início</a></li>
+            <li><a href="#sobre" class="links">Sobre</a></li>
+            <li><a href="#servicos" class="links">Serviços</a></li>
+            <li><a href="#contato" class="links">Contato</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <aside class="hidden">
+                <h2>Precisando de uma manutenção?</h2>
+                <h2>A <span>InfoCell</span> te ajuda!</h2>
+                <p>Se seu celular ou notebook está com algum defeito, venha até nós que proporcionamos os melhores e mais confiavéis consertos da região.</p>
+            </aside>
+            
+            <article class="hidden">
+                <img src="img/logo-img.webp" alt="celular">
+            </article>
+        </section>
+
+        <section class="sobre hidden" id="sobre">
+            <h1 style="margin-left: 10%; font-family: 'Kanit'; color: blue; font-size: 40px;">Sobre Nós</h1>
+            <div>
+                <p>Na <strong><span>InfoCell</span></strong>, oferecemos soluções completas para suas necessidades tecnológicas. Somos especializados em assistência técnica para celulares e notebooks, garantindo reparos rápidos e de alta qualidade para manter seus dispositivos funcionando perfeitamente.</p>
+                <p>Além disso, contamos com uma ampla variedade de acessórios, desde capas e películas até carregadores e fones de ouvido, para que você possa equipar seus aparelhos com o que há de melhor.</p>
+                <p>Também disponibilizamos serviços de impressão e xerox, atendendo às suas demandas com agilidade e eficiência.</p>
+                <p><strong>Nossa missão</strong> é oferecer atendimento confiável, produtos de qualidade e serviços que facilitem seu dia a dia. Conte conosco para cuidar dos seus equipamentos e garantir a melhor experiência em tecnologia.</p>
+                
+                <img src="img/reparo.webp" alt="">
+            </div>
+        </section>
+
+        <section class="servicos hidden" id="servicos">
+            <h1 style="margin-left: 10%; font-family: 'Kanit'; color: blue; font-size: 40px;">Serviços</h1>
+            <div class="celular">
+                <i class="fas fa-mobile-alt" id="icone-cell"></i>
+                <h1>Celular</h1>
+                <p><i class="fas fa-tools"></i> Troca de tela</p>
+                <p><i class="fas fa-tools"></i> Desbloqueio</p>
+                <p><i class="fas fa-tools"></i> Troca de baterias</p>
+                <p><i class="fas fa-tools"></i> Conector de carga</p>
+                <p><i class="fas fa-tools"></i> Revenda de celular</p>
+            </div>
+            <div class="notebook">
+                <i class="fas fa-laptop" id="icone-note"></i>
+                <h1>Notebook</h1>
+                <p><i class="fas fa-tools"></i> Reparos em geral</p>
+            </div>
+        </section>
+
+        <section class="contato hidden" id="contato">
+            <h1 style="margin-left: 10%; font-family: 'Kanit'; color: blue; font-size: 40px;">Contato</h1>
+
+            <a href="https://w.app/eaMbR6" target="_blank">
+                <div class="whats">
+                    <div class="whats-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <p>WhatsApp <br> +55 (79) 9 9886-6780</p>
+                </div>
+            </a>
+            
+            <a href="https://www.instagram.com/i.n.f.o.c.e.ll?igsh=dDh2bnVtNGY1ZHNx" target="_blank">
+                <div class="whats">
+                    <div class="whats-icon"><i class="fab fa-instagram"></i></div>
+                    <p>Instagram <br> @i.n.f.o.c.e.ll</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+        
+        <a href="https://github.com/devpedrogo" target="_blank" id="copy"><p>&copy; devpedrogo</p></a>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>
