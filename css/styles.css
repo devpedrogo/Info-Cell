@@ -74,8 +74,9 @@ ul a:hover{
 main{
     display: flex;
     flex-flow: row wrap;
-    padding-top: 0px;
+    padding-top: 100px;
     overflow: hidden;
+    gap: 100px;
 }
 aside{
     margin-left: 10%;
@@ -182,6 +183,9 @@ footer i:nth-child(4):hover{
     transform: scale(0.9);
     transition: all 1s ease-in-out;
 }
+.area-services{
+    width: 100%;
+}
 .servicos{
     display: flex;
     flex-flow: row wrap;
@@ -193,7 +197,6 @@ footer i:nth-child(4):hover{
     padding: 0px;
     gap: 5%;
     font-family: "Kanit", serif;
-    margin-bottom: 30px;
 }
 .celular #icone-cell{
     color: orange;
