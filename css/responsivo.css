@@ -1,137 +1,140 @@
-@media screen and (max-width: 1338px) {
-    aside{
-        margin-top: 50px;
+@media (min-width: 700px) {
+    header {
+        min-height: 82px;
     }
-    aside h2:nth-child(2){
-        line-height: 50px;
-    }
-}
-@media screen and (max-width: 1200px) {
-    ul{
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        width: 100%;
-        padding: 0;
-        padding-bottom: 50px;
-        border-radius: 0px 0px 15px 15px;
-        background-color: #4828d6;
-        gap: 25px;
-        
-    }
-    ul li{
-        margin-left: 10%;
-        
-    }
-    .logo{
-        flex: 80%;
-        margin-right: 10%;
-        justify-content: space-between;
-    }
-    .logo button{
-        display: inline-block;
-    }
-    .logo button i:hover{
-        color: orange;
-        transition: all .5s ease;
-    }
-    aside{
-        margin-top: 0px;
-    }
-    aside h2{
-        font-size: 40px;
-        line-height: 45px;
-    }
-    aside p{
-        margin-top: 0px;
-    }
-    article{
-        margin: auto;
-    }
-    #inicio{
-        flex-direction: column; 
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .logo h1{
-        font-size: 50px;
+    #menu-btn {
+        display: none;
     }
-    main{
-        flex-flow: column nowrap;
+
+    nav {
+        position: static;
     }
-    aside{
-        margin-right: 10%;
-    }
-    article{
-        margin-left: 10%;
-        margin: auto;
-    }
-    .contato{
-        border: none;
-        padding: 0;
-    }
-    .contato a{
-        width: 100%;
-        flex-direction: column;
-        gap: 20px;
-        box-shadow: 0px 0px 0px 0px;
-    }
-    .whats{
+
+    #menu,
+    #menu.menu-open {
+        display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
+        gap: 8px;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
     }
-    .whats-icon{
-        padding: 15px;
+
+    #menu a {
+        padding: 10px 13px;
+        font-size: 14px;
     }
-    .whats-icon i{
-        font-size: 40px;
+
+    .hero {
+        grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+        gap: 24px;
+        min-height: min(680px, calc(100vh - 82px));
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
-    .whats p{
-        font-size: 15px;
-        width: 200px;
+
+    .hero-content > p {
+        font-size: 17px;
+    }
+
+    .hero-image-wrap {
+        width: min(34vw, 390px);
+    }
+
+    .floating-label {
+        right: -10px;
+        bottom: 32px;
+        font-size: 13px;
+    }
+
+    .section {
+        padding-top: 88px;
+        padding-bottom: 88px;
+    }
+
+    .about-content {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 44px;
+    }
+
+    .about-content > img {
+        max-height: 430px;
+    }
+
+    .about-copy p {
+        font-size: 16px;
+    }
+
+    .servicos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .service-card {
+        padding: 30px;
+    }
+
+    .contato {
+        padding-bottom: 88px;
+    }
+
+    footer {
+        padding-top: 38px;
     }
 }
 
-@media screen and (max-width: 430px) {
-    footer div{
-        gap: 50px;
+@media (min-width: 1024px) {
+    .hero {
+        gap: 62px;
     }
-    footer div i{
-        font-size: 35px;
+
+    .hero-visual {
+        padding: 30px;
     }
-    article{
-        margin-left: 10%;
-        margin-right: 10%;
+
+    .hero-image-wrap {
+        width: 390px;
     }
-    .contato{
-        border: none;
-    }
-    .contato a{
-        width: 320px;
-        flex-direction: column;
-        gap: 20px;
-        box-shadow: 0px 0px 0px 0px;
-    }
-    .whats-icon{
-        padding: 15px;
-    }
-    .whats-icon i{
-        font-size: 40px;
-    }
-    .whats p{
-        font-size: 15px;
-        width: 200px;
+
+    .section-heading {
+        margin-bottom: 42px;
     }
 }
-@media screen and (max-width: 320px) {
-    .logo h1 img{
-        display: none;
+
+@media (max-width: 360px) {
+    header {
+        min-height: 68px;
+        padding-right: 5%;
+        padding-left: 5%;
     }
-    .contato a{
-        width: 200px;
-        flex-direction: column;
-        gap: 20px;
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .logo-img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .floating-label {
+        right: -8px;
+        max-width: 195px;
+        padding: 11px;
+        font-size: 11px;
+    }
+
+    .service-card {
+        padding: 21px;
     }
 }
