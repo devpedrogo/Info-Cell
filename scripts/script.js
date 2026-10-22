@@ -1,68 +1,64 @@
-let menuBtn = document.getElementById('menu-btn')
-let menu = document.getElementById('menu')
-let menuIcone = document.getElementById('menu-icone')
+document.body.classList.add('js-ready')
 
-menuBtn.addEventListener('click', () => {
-    if (menu.style.display === 'none' && menuIcone.classList.contains('fa-bars')) {
-        menu.style.display = 'flex'
-        menuIcone.classList.remove('fa-bars')
-        menuIcone.classList.add('fa-times')
-    }
-    else {
-        menu.style.display = 'none'
-        menuIcone.classList.remove('fa-times')
-        menuIcone.classList.add('fa-bars')
-    }
-})
-
+const menuBtn = document.getElementById('menu-btn')
+const menu = document.getElementById('menu')
+const menuIcone = document.getElementById('menu-icone')
+const links = document.querySelectorAll('.links')
+const sections = document.querySelectorAll('main section[id]')
 const elementos = document.querySelectorAll('.hidden')
 
+function setMenuOpen(isOpen) {
+    menu.classList.toggle('menu-open', isOpen)
+    menuBtn.setAttribute('aria-expanded', String(isOpen))
+    menuBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu')
+    menuIcone.classList.toggle('fa-bars', !isOpen)
+    menuIcone.classList.toggle('fa-xmark', isOpen)
+}
 
-const links = document.querySelectorAll('.links')
-const sections = document.querySelectorAll('section')
-
-window.addEventListener('scroll', () => {
-    let current = ''
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop
-        const sectionHeight = section.offsetHeight
-
-        if (window.scrollY >= sectionTop - sectionHeight / 5) {
-            current = section.getAttribute('id')
-        }
-    })
-
-    links.forEach(link => {
-        link.classList.remove('active')
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.add('active')
-        }
-    })
+menuBtn.addEventListener('click', () => {
+    setMenuOpen(menuBtn.getAttribute('aria-expanded') !== 'true')
 })
 
-const myObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show')
-        }
-        else {
-            entry.target.classList.remove('show')
-        }
-    })
+links.forEach((link) => {
+    link.addEventListener('click', () => setMenuOpen(false))
 })
 
-elementos.forEach((elemento) => myObserver.observe(elemento))
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        setMenuOpen(false)
+    }
+})
 
+if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show')
+                observer.unobserve(entry.target)
+            }
+        })
+    }, { threshold: 0.12 })
 
+    elementos.forEach((elemento) => revealObserver.observe(elemento))
+} else {
+    elementos.forEach((elemento) => elemento.classList.add('show'))
+}
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+function updateActiveLink() {
+    const currentSection = [...sections].reverse().find((section) => {
+        return section.getBoundingClientRect().top <= 140
+    })
 
-        const target = document.querySelector(this.getAttribute('href'));
-        window.scrollTo({
-            top: target.offsetTop - document.querySelector('header').offsetHeight, behavior: 'smooth'
-        });
-    });
-});
+    links.forEach((link) => {
+        const isActive = currentSection && link.getAttribute('href') === `#${currentSection.id}`
+        link.classList.toggle('active', Boolean(isActive))
+    })
+}
+
+window.addEventListener('scroll', updateActiveLink, { passive: true })
+window.addEventListener('resize', () => {
+    if (window.matchMedia('(min-width: 700px)').matches) {
+        setMenuOpen(false)
+    }
+})
+updateActiveLink()
