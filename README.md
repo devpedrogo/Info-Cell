@@ -1,1 +1,1 @@
-Landing page manutenção de dispositivos móveis.
+Landing page estabelecimento de manutenção de dispositivos móveis.
